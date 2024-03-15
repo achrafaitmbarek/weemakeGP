@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/logo.png";
+---
+
+<footer class="bg-gradient-linear-3 p-10 text-gray-800">
+    <div class="max-w-6xl mx-auto flex justify-between items-center border-collapse">
+
+      <div class="text-center border-r border-gray-400 pr-10">
+        <Image src={logo} alt="WeeMake Logo" class="mb-2 max-h-32 w-32"/>
+        <p class="font-extrabold text-4xl">WeeMake</p>
+        <p class="text-sm">Gestion de Cookies</p>
+      </div>
+
+      <div class="flex flex-col border-r border-gray-400 px-10">
+        <p class="font-semibold mb-2">Navigation</p>
+        <p class="cursor-pointer">Accueil</p>
+        <p class="cursor-pointer">Contact</p>
+        <p class="cursor-pointer">Mentions Légales</p>
+      </div>
+
+      <div class="font-semibold mb-2 text-xl pl-10">
+        <p>Coordonnées</p>
+        <p>78 Rue de Leybardie, 33300 Bordeaux</p>
+        <p>mail@mail.com</p>
+        <p class="text-sm mt-2">Mentions Légales</p>
+      </div>
+    </div>
+</footer>

@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/NavBar.astro";
+import HeroSection from "../components/HeroSection.astro";
+import DescriptionSection from "../components/DescriptionSection.astro";
+import FlippedCard from "../components/FlippedCard.astro";
+import { Image } from "astro:assets";
+import heroPic from "../assets/logoBlanc.png";
+import StepByStep from "../components/StepByStep.astro";
+import ContactForm from "../components/ContactForm.astro";
+import CardSection from "../components/CardSection.astro";
+import Footer from "../components/Footer.astro";
+import PartnerCarousel from "../components/PartnerCaroussel.astro";
+import ClientAvisCaroussel from "../components/ClientAvisCaroussel.astro";
+---
+
+<Layout title="Welcome WeeMake">
+  <header class="flex flex-col space-y-8 bg-gradient-linear m-0 p-4 md:p-6">
+    <!-- This div will contain the background image -->
+    <Image
+      alt={""}
+      src={heroPic}
+      class="absolute -top-4 right-0 bottom-0 w-1/2 h-dvh bg-no-repeat bg-right bg-contain z-30"
+    />
+    <NavBar />
+    <HeroSection />
+  </header>
+  <main>
+    <DescriptionSection />
+    <StepByStep />
+    <FlippedCard />
+    <CardSection />
+    <PartnerCarousel/>
+    <ClientAvisCaroussel/>
+    <ContactForm />
+    <Footer />
+  </main>
+</Layout>
+<footer></footer>
