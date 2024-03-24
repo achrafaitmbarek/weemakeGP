@@ -1,87 +1,122 @@
 ---
-import Image from "astro/components/Image.astro";
-import VectorBg from "../assets/VectorBg.svg";
 
 ---
 
-<section class="flex flex-col space-y-12 bg-gradient-linear-3 mt-32 px-12">
-  <p
-    class="text-4xl text-center text-white -mt-8 mx-40 p-6 bg-gradient-linear-2 rounded-2xl uppercase"
+<div class="bg-gradient-linear-3">
+  <section
+    class="flex flex-col space-y-12 mt-32 px-12 bg-no-repeat items-center justify-center"
+    style={{ backgroundImage: "url('src/assets/Vector20.png')" }}
   >
-    NOS TARIFS
-  </p>
-  <p class="text-center text-black text-4xl">Nos offres tarifaires détailées</p>
-  <div class="p-10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-bold  mb-4">Starter</h2><p
-          class="text-4xl font-bold mb-4"
-        >
-          200€ / mois
-        </p>
-		<div class="flex flex-row space-x-6 mb-4">
-			<div class="w-1/3 h-[0px] border border-gray-400"></div> 
-			<div class="w-full h-[0px] border border-blue-400"></div> 
-		</div>
-		
-		<ul class="mb-6 list-disc list-inside">
-          <li>10 utilisateurs</li><li>5.000 enregistrements</li>
-        </ul><h3 class="font-bold mb-2">Fonctionnalités</h3><ul class="mb-6 list-disc list-inside">
-          <li>Traçabilité des modifications</li>
-        </ul>
-      </div><div class="bg-white p-6 rounded-lg shadow-md relative">
-		<div class="absolute -top-3 -right-3 w-[213px] h-[52px] px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-orange-400 rounded-[20px] shadow shadow-inner justify-center items-center gap-2.5 inline-flex">
-			<div class="text-white text-[27px] font-bold font-['Exo 2']">Recommandé</div>
-			</div>
-		<h2 class="text-2xl font-bold mb-4">Pro</h2><p
-          class="text-4xl font-bold mb-4"
-        >
-          300€ / mois
-        </p>
-		<div class="flex flex-row space-x-6 mb-4">
-			<div class="w-1/3 h-[0px] border border-gray-400"></div> 
-			<div class="w-full h-[0px] border border-blue-400"></div> 
-		</div>
-		<ul class="mb-6 list-disc list-inside">
-          <li>50 utilisateurs</li><li>50.000 enregistrements</li>
-        </ul><h3 class="font-bold mb-2">Fonctionnalités</h3><ul class="mb-6 list-disc list-inside">
-          <li>Création d'objets</li><li>Traçabilité des modifications</li><li>
-            Alertes e-mail
-          </li><li>API</li>
-        </ul><h3 class="font-bold mb-2">Outils</h3><ul class="mb-6 list-disc list-inside">
-          <li>Workflow : 180€ / mois</li><li>
-            Génération de document 90€ / mois
-          </li><li>Personnalisation 30€ / mois</li><li>Extranet</li><li>
-            Nous consulter
-          </li><li>Tableaux de bord Biwee sur mesure 180€ / mois</li>
-        </ul>
-      </div><div class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-bold mb-4">Premium</h2><p
-          class="text-4xl font-bold mb-4"
-        >
-          600€ / mois
-        </p>
-		<div class="flex flex-row space-x-6 mb-4">
-			<div class="w-1/3 h-[0px] border border-gray-400"></div> 
-			<div class="w-full h-[0px] border border-blue-400"></div> 
-		</div>
-		<ul class="mb-6 list-disc list-inside">
-          <li>250 utilisateurs</li><li>250.000 enregistrements</li>
-        </ul><h3 class="font-bold mb-2">Fonctionnalités</h3><ul class="mb-6 list-disc list-inside">
-          <li>Création d'objets</li><li>Traçabilité des modifications</li><li>
-            Alertes e-mail
-          </li><li>API</li><li>Accès SQL à la base de données</li>
-        </ul><h3 class="font-bold mb-2">Outils</h3><ul class="mb-6 list-disc list-inside">
-          <li>Workflow : 360€ / mois</li><li>
-            Génération de document 180€ / mois
-          </li><li>Personnalisation 30€ / mois</li><li>Extranet</li><li>
-            Nous consulter
-          </li><li>Tableaux de bord Biwee sur mesure 360€ / mois</li><li>
-            SSO
-          </li>
-        </ul>
+    <div></div>
+    <p
+      class="text-4xl text-center text-white -mt-8 mx-auto p-3 bg-gradient-linear-2 rounded-2xl uppercase w-full md:w-1/2"
+    >
+      NOS TARIFS
+    </p>
+
+    <p class="text-center text-black text-4xl">
+      Nos offres tarifaires détailées
+    </p>
+
+    <div class="p-10 h-full w-full bg-no-repeat">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md border-violet-500 border-2">
+          <h2 class="text-2xl font-bold mb-4">Starter</h2><p
+            class="text-4xl font-bold mb-4"
+          >
+            200€ / mois
+          </p>
+          <div class="flex flex-row space-x-6 mb-4">
+            <div class="w-1/3 h-[0px] border border-gray-400"></div>
+            <div class="w-full h-[0px] border border-blue-400"></div>
+          </div>
+
+          <ul class="mb-6 list-disc list-inside">
+            <li>10 utilisateurs</li><li>5.000 enregistrements</li>
+          </ul><h3 class="font-bold mb-2">Fonctionnalités</h3><ul
+            class="mb-6 list-disc list-inside"
+          >
+            <li>Traçabilité des modifications</li>
+          </ul>
+        </div><div class="bg-white p-6 rounded-lg shadow-md relative  border-emerald-500 border-2">
+          <div
+            class="absolute -top-3 -right-3 w-[213px] h-[52px] px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-orange-400 rounded-[20px] shadow shadow-inner justify-center items-center gap-2.5 inline-flex"
+          >
+            <div class="text-white text-[27px] font-bold font-['Exo 2']">
+              Recommandé
+            </div>
+          </div>
+          <h2 class="text-2xl font-bold mb-4">Pro</h2><p
+            class="text-4xl font-bold mb-4"
+          >
+            300€ / mois
+          </p>
+          <div class="flex flex-row space-x-6 mb-4">
+            <div class="w-1/3 h-[0px] border border-gray-400"></div>
+            <div class="w-full h-[0px] border border-blue-400"></div>
+          </div>
+          <ul class="mb-6 list-disc list-inside">
+            <li>50 utilisateurs</li><li>50.000 enregistrements</li>
+          </ul><h3 class="font-bold mb-2">Fonctionnalités</h3><ul
+            class="mb-6 list-disc list-inside"
+          >
+            <li>Création d'objets</li><li>Traçabilité des modifications</li><li>
+              Alertes e-mail
+            </li><li>API</li>
+          </ul><h3 class="font-bold mb-2">Outils</h3><ul
+            class="mb-6 list-disc list-inside"
+          >
+            <li>Workflow : 180€ / mois</li><li>
+              Génération de document 90€ / mois
+            </li><li>Personnalisation 30€ / mois</li><li>Extranet</li><li>
+              Nous consulter
+            </li><li>Tableaux de bord Biwee sur mesure 180€ / mois</li>
+          </ul>
+        </div><div class="bg-white p-6 rounded-lg shadow-md  border-slate-500 border-2">
+          <h2 class="text-2xl font-bold mb-4">Premium</h2><p
+            class="text-4xl font-bold mb-4"
+          >
+            600€ / mois
+          </p>
+          <div class="flex flex-row space-x-6 mb-4">
+            <div class="w-1/3 h-[0px] border border-gray-400"></div>
+            <div class="w-full h-[0px] border border-blue-400"></div>
+          </div>
+          <ul class="mb-6 list-disc list-inside">
+            <li>250 utilisateurs</li><li>250.000 enregistrements</li>
+          </ul><h3 class="font-bold mb-2">Fonctionnalités</h3><ul
+            class="mb-6 list-disc list-inside"
+          >
+            <li>Création d'objets</li><li>Traçabilité des modifications</li><li>
+              Alertes e-mail
+            </li><li>API</li><li>Accès SQL à la base de données</li>
+          </ul><h3 class="font-bold mb-2">Outils</h3><ul
+            class="mb-6 list-disc list-inside"
+          >
+            <li>Workflow : 360€ / mois</li><li>
+              Génération de document 180€ / mois
+            </li><li>Personnalisation 30€ / mois</li><li>Extranet</li><li>
+              Nous consulter
+            </li><li>Tableaux de bord Biwee sur mesure 360€ / mois</li><li>
+              SSO
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
+
+<style>
+  @media (max-width: 639px) {
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0.5rem 1rem;
+      font-size: 1.5rem;
+      min-width: max-content;
+    }
+  }
+</style>
+
 

@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/NavBar.astro";
+import HeroSection from "../components/HeroSection.astro";
+import { Image } from "astro:assets";
+import heroPic from "../assets/logoBlanc.png";
+import ContactForm from "../components/ContactForm.astro";
+import Footer from "../components/Footer.astro";
+import LocalisationSection from "../components/LocalisationSection.astro";
+import MentionLegal from "../components/mentionLegal.astro";
+---
+
+<Layout title="Welcome WeeMake">
+  <header class="flex flex-col space-y-8 bg-gradient-linearContact m-0 p-4 md:p-6 relative hero-section">
+    <div class="hidden sm:block hero-image">
+      <Image
+        alt={""}
+        src={heroPic}
+        class="absolute h- -top-4 right-0 bottom-0 w-1/2 h-dvh bg-no-repeat bg-right bg-contain z-30"
+      />
+    </div>
+    <NavBar />
+    <HeroSection />
+  </header>
+  <main>
+    <MentionLegal/>
+    <ContactForm />
+    <Footer />
+  </main>
+</Layout>
+<footer></footer>
+
+<style>
+  @media (max-width: 889px) {
+    .hero-image {
+      display: none;
+    }
+  }
+</style>

@@ -56,16 +56,17 @@ const processSteps = [
 
 <section class="flex flex-col space-y-12 bg-gradient-linear-3 mt-32 px-12">
   <p
-    class="text-4xl text-center text-white -mt-8 mx-40 p-6 bg-gradient-linear-2 rounded-2xl uppercase"
-  >
-    comment ca marche ?
-  </p>
+  class="text-4xl text-center text-white -mt-8 mx-40 p-6 bg-gradient-linear-2 rounded-2xl uppercase"
+>
+  comment ca marche ?
+</p>
   <p class="text-center text-black text-4xl">
     Simplifiez la saisie et l'organisation collaboratives de vos données
   </p>
   <div class="flex flex-col items-center text-center">
     <div class="container absolute flex justify-center ">
       <svg
+        id="my-svg"
         width="200"
         height="1650"
         id="mySvg"
@@ -125,6 +126,20 @@ const processSteps = [
       stroke-dashoffset: 1000;
     }
   }
+
+  @media (max-width: 1300px) {
+    #my-svg {
+      display: none;
+    }
+  }
+  @media (max-width: 639px) {
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      min-width: 240px;
+    }
+  }
+
 </style>
 
 

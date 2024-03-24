@@ -12,20 +12,23 @@ import CardSection from "../components/CardSection.astro";
 import Footer from "../components/Footer.astro";
 import PartnerCarousel from "../components/PartnerCaroussel.astro";
 import ClientAvisCaroussel from "../components/ClientAvisCaroussel.astro";
+import Carousel from "../components/Carousel.astro";
 ---
 
 <Layout title="Welcome WeeMake">
-  <header class="flex flex-col space-y-8 bg-gradient-linear m-0 p-4 md:p-6">
-    <!-- This div will contain the background image -->
-    <Image
-      alt={""}
-      src={heroPic}
-      class="absolute -top-4 right-0 bottom-0 w-1/2 h-dvh bg-no-repeat bg-right bg-contain z-30"
-    />
+  <header class="flex flex-col space-y-8 bg-gradient-linear m-0 p-4 md:p-6 relative hero-section">
+    <div class="hidden sm:block hero-image overflow-hidden">
+      <Image
+        alt={""}
+        src={heroPic}
+        class="absolute -top-4 right-0 bottom-0 w-3/2 h-dvh bg-no-repeat bg-right bg-contain z-30"
+      />
+    </div>
     <NavBar />
-    <HeroSection />
+    <HeroSection/>
   </header>
   <main>
+    <Carousel/>
     <DescriptionSection />
     <StepByStep />
     <FlippedCard />
@@ -37,3 +40,11 @@ import ClientAvisCaroussel from "../components/ClientAvisCaroussel.astro";
   </main>
 </Layout>
 <footer></footer>
+
+<style>
+  @media (max-width: 889px) {
+    .hero-image {
+      display: none;
+    }
+  }
+</style>
