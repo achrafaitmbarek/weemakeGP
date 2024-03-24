@@ -6,7 +6,6 @@ import part3 from "../assets/partenaires/cofaq.png"
 import part4 from "../assets/partenaires/dgac.png"
 ---
 
-
 <div class="flex flex-col space-y-12">
     <section class="flex flex-col space-y-10 mt-32 mb-12">
       <p
@@ -19,44 +18,48 @@ import part4 from "../assets/partenaires/dgac.png"
       </p>
     </section>
 
-<div class="flex flex-row justify-between items-center max-w-screen-2xl mx-auto mt-">
-    <button
-    onclick="document.getElementById('slider').scrollLeft -= 300"
-      class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 px-4 py-2 bg-transparent shadow-none hover:bg-transparent focus:bg-transparent active:bg-transparent"
-      ><svg width="56" height="86" viewBox="0 0 56 86" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M49 7L13 43L49 79" stroke="#70B3C1" stroke-width="18"/>
-</svg>
-</button
-    >
-    
-    
-
-    <div id="slider" class="overflow-hidden flex items-center gap-5.5">
-      <div class="flex space-x-12 scroll-pl-6 scroll-pr-6 justify-center items-center">
-        <Image class='w-full h-full object-cover' src={part1} alt="partenaire" />
-        <Image class='w-full h-full object-cover' src={part2} alt="partenaire" />
-        <Image class='w-full h-full object-cover' src={part3} alt="partenaire" />
-        <Image class='w-full h-full object-cover' src={part4} alt="partenaire" /> 
-      </div>
-    </div>
-    
-    <button
-    onclick="document.getElementById('slider').scrollLeft += 300"
-      class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 px-4 py-2 bg-transparent shadow-none hover:bg-transparent focus:bg-transparent active:bg-transparent"
-      ><svg width="56" height="86" viewBox="0 0 56 86" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 79L43 43L7.00001 7" stroke="#70B3C1" stroke-width="18"/>
-        </svg>
+    <div class="flex flex-row justify-between items-center max-w-screen-2xl mx-auto mt-">
+        <button onclick="document.getElementById('slider').scrollLeft -= 300"
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 px-4 py-2 bg-transparent shadow-none hover:bg-transparent focus:bg-transparent active:bg-transparent"
+        >
+            <svg width="56" height="86" viewBox="0 0 56 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M49 7L13 43L49 79" stroke="#70B3C1" stroke-width="18"/>
+            </svg>
         </button>
-  </div>
+        
+        <div id="slider" class="overflow-hidden flex items-center gap-5.5">
+            <div class="flex space-x-12 scroll-pl-6 scroll-pr-6 justify-center items-center">
+                <Image class='partner-image w-full h-full object-cover' src={part1} alt="partenaire" />
+                <Image class='partner-image w-full h-full object-cover' src={part2} alt="partenaire" />
+                <Image class='partner-image w-full h-full object-cover' src={part3} alt="partenaire" />
+                <Image class='partner-image w-full h-full object-cover' src={part4} alt="partenaire" />
+            </div>
+        </div>
+        
+        <button onclick="document.getElementById('slider').scrollLeft += 300"
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 px-4 py-2 bg-transparent shadow-none hover:bg-transparent focus:bg-transparent active:bg-transparent"
+        >
+            <svg width="56" height="86" viewBox="0 0 56 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 79L43 43L7.00001 7" stroke="#70B3C1" stroke-width="18"/>
+            </svg>
+        </button>
+    </div>
 </div>
 
-
 <style>
-  @media (max-width: 639px) {
+@media (max-width: 639px) {
     p {
-      margin-left: auto;
-      margin-right: auto;
-      min-width: 240px;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 240px;
     }
-  }
+}
+
+.partner-image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.partner-image:hover {
+    transform: scale(1.05);
+}
 </style>

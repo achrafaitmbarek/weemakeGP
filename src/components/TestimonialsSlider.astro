@@ -1,0 +1,125 @@
+<style>
+    .slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
+    }
+    .slide {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        margin: 0 15px;
+    }
+    .slide.active {
+        display: flex;
+        opacity: 1;
+    }
+    .testimonial {
+        text-align: center;
+        background-color: #FFF;
+        padding: 20px;
+        box-shadow: inset 2px 2px 10px 2px rgba(0,0,0,0.2);
+        border-radius: 15px;
+        margin: 0 10px;
+        flex: 1; /* Equal width for testimonials */
+    }
+    #prev, #next {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin: 0 20px;
+    }
+    #prev svg, #next svg {
+        stroke: #70B3C1;
+        stroke-width: 18;
+    }
+    .testimonial span {
+        display: block;
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 0.5rem;
+    }
+    .testimonial p {
+        font-size: 1rem;
+        color: #666;
+    }
+</style>
+
+<body>
+
+<div class="slider my-20 py-14">
+    <button id="prev">
+        <svg width="56" height="86" viewBox="0 0 56 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M49 7L13 43L49 79" stroke="#70B3C1" stroke-width="18"></path>
+        </svg>
+    </button>
+
+    <div class="slide active">
+        <div class="testimonial ">
+            <span>Brice GUYOT</span>
+            <p>Je suis impressionné par la facilité d'utilisation et la puissance des outils de cette entreprise.</p>
+        </div>
+        <div class="testimonial">
+            <span>Jane Doe</span>
+            <p>Je suis impressionné par la facilité d'utilisation et la puissance des outils de cette entreprise. Leurs logiciels no code/low code ont révolutionné ma façon de créer des applications. 
+                Recommandé à tous les entrepreneurs!</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="testimonial ">
+            <span>John Smith</span>
+            <p>Je suis impressionné par la facilité d'utilisation et la puissance des outils de cette entreprise. Leurs logiciels no code/low code ont révolutionné ma façon de créer des applications. 
+                Recommandé à tous les entrepreneurs!.</p>
+        </div>
+        <div class="testimonial ">
+            <span>Emily White</span>
+            <p>Je suis impressionné par la facilité d'utilisation et la puissance des outils de cette entreprise. Leurs logiciels no code/low code ont révolutionné ma façon de créer des applications. 
+                Recommandé à tous les entrepreneurs!</p>
+        </div>
+    </div>
+
+
+
+    <button id="next">
+        <svg width="56" height="86" viewBox="0 0 56 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 79L43 43L7.00001 7" stroke="#70B3C1" stroke-width="18"></path>
+        </svg>
+    </button>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = 'none';
+            slide.classList.remove("active");
+        });
+        slides[index].style.display = 'flex'; 
+        setTimeout(() => { 
+            slides[index].classList.add("active");
+        }, 100);
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    document.getElementById("next").addEventListener("click", nextSlide);
+    document.getElementById("prev").addEventListener("click", prevSlide);
+
+    
+    showSlide(currentSlide);
+</script>
+

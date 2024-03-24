@@ -12,7 +12,9 @@ import CardSection from "../components/CardSection.astro";
 import Footer from "../components/Footer.astro";
 import PartnerCarousel from "../components/PartnerCaroussel.astro";
 import ClientAvisCaroussel from "../components/ClientAvisCaroussel.astro";
-import Carousel from "../components/Carousel.astro";
+import TestimonialsSlider from "../components/TestimonialsSlider.astro";
+
+
 ---
 
 <Layout title="Welcome WeeMake">
@@ -28,18 +30,17 @@ import Carousel from "../components/Carousel.astro";
     <HeroSection/>
   </header>
   <main>
-    <Carousel/>
     <DescriptionSection />
     <StepByStep />
     <FlippedCard />
     <CardSection />
     <PartnerCarousel/>
-    <ClientAvisCaroussel/>
+    <TestimonialsSlider />
     <ContactForm />
     <Footer />
+    
   </main>
 </Layout>
-<footer></footer>
 
 <style>
   @media (max-width: 889px) {
