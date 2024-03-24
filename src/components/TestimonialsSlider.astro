@@ -49,8 +49,17 @@
 </style>
 
 <body>
-
-<div class="slider my-20 py-14">
+    <section class="flex flex-col space-y-10 mt-2 mb-0">
+        <p
+        class="text-4xl text-center text-white mx-auto py-3 bg-gradient-linear-2 rounded-2xl uppercase w-full md:w-1/2"
+      >
+      TÉMOIGNAGES
+      </p>
+        <p class="text-center text-black text-3xl">
+            Ce que dissent nos clients
+        </p>
+      </section>
+<div class="slider my-10 py-14">
     <button id="prev">
         <svg width="56" height="86" viewBox="0 0 56 86" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M49 7L13 43L49 79" stroke="#70B3C1" stroke-width="18"></path>
@@ -58,7 +67,7 @@
     </button>
 
     <div class="slide active">
-        <div class="testimonial ">
+        <div class="testimonial hidden md:block">
             <span>Brice GUYOT</span>
             <p>Je suis impressionné par la facilité d'utilisation et la puissance des outils de cette entreprise.</p>
         </div>
@@ -70,7 +79,7 @@
     </div>
 
     <div class="slide">
-        <div class="testimonial ">
+        <div class="testimonial hidden md:block">
             <span>John Smith</span>
             <p>Je suis impressionné par la facilité d'utilisation et la puissance des outils de cette entreprise. Leurs logiciels no code/low code ont révolutionné ma façon de créer des applications. 
                 Recommandé à tous les entrepreneurs!.</p>
